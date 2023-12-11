@@ -7,7 +7,7 @@ use JASKIS
 
 // 2. Create a collection called bounties
 
-debugger.createCollection('Bounties')
+db.createCollection('Bounties')
 // ADD THE ANIMAL BOUNTIES
 // 1. Insert the given "Thanoceros" bounty object
 {
@@ -21,16 +21,16 @@ debugger.createCollection('Bounties')
   }
 
 // 2. Query for all bounties in the bounties collection
-debugger.bounties.find()
+db.bounties.find()
 
 // 3. Insert many bounties at once using the given objects
-debugger.bounties.insertmany
+db.bounties.insertmany
 // MANAGE THE DATABASE
 // Queries
 // 1. Query for all bounties in the Grasslands
-debugger.bounties.find({location:'grasslands'})
+db.bounties.find({location:'grasslands'})
 // 2. Query for all bounties with a reward worth 10000 or more
-debugger.bounties.find({reward:$gt:10000})
+db.bounties.find({reward:$gt:10000})
 // 3. Query for all bounties, but exclude the client attribute from being shown
 db.bounties.find({}, {client: 0})
 // 4. Query for a Groundhog in the Woodlands
